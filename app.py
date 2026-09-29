@@ -1,5 +1,12 @@
 import streamlit as st
 
+from supabase import create_client
+
+supabase = create_client(
+    st.secrets["SUPABASE_URL"],
+    st.secrets["SUPABASE_KEY"]
+)
+
 st.set_page_config(
     page_title="Adaptive Learning Agent",
     page_icon="🧠",
